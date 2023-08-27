@@ -1,9 +1,12 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  # run full scan daily on default branch (develop)
+  schedule:
+    # TODO: every last Saturday of the month at 23:59 UTC
+    - cron: "58 23 * * 6" # every Saturday at 23:59 UTC
+
+  # allow manual triggering
+  workflow_dispatch:
 jobs:
   test:
     timeout-minutes: 60
