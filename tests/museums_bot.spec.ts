@@ -5,7 +5,7 @@ const pass = "PalianMusuemsSonntag928";
 
 const museumsList = [
 	{
-		id: "57", // TODO: Anoha has to select adult&child separately!
+		id: "57",
 		name: "ANOHA",
 	},
 	{
@@ -20,7 +20,7 @@ const museumsList = [
 		id: "48",
 		name: "Pergamonmuseum",
 	},
-	// TODO: does not exist anymore
+	// // TODO: does not exist anymore
 	// {
 	// 	id: "16",
 	// 	name: "Hamburger Bahnhof",
