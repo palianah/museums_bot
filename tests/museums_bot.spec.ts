@@ -5,25 +5,25 @@ const pass = "PalianMusuemsSonntag928";
 
 const museumsList = [
 	{
-		id: "57",
+		id: "57", // TODO: Anoha has to select adult&child separately!
 		name: "ANOHA",
 	},
 	{
 		id: "37",
 		name: "Museum für Naturkunde",
 	},
-	,
-	{
-		id: "16",
-		name: "Hamburger Bahnhof",
-	},
 	{
 		id: "10",
 		name: "Deutsches Technikmuseum",
 	},
+	{
+		id: "48",
+		name: "Pergamonmuseum",
+	},
+	// TODO: does not exist anymore
 	// {
-	// 	id: "48",
-	// 	name: "Pergamonmuseum",
+	// 	id: "16",
+	// 	name: "Hamburger Bahnhof",
 	// },
 ];
 
@@ -34,6 +34,13 @@ const museumToTicketSelection = async (page, museumsId: string) => {
 	// await page.click('button[translate="ticket.breadcrumbs.filters.reset"]');
 	await page.locator("time-slot-selection").first().click();
 	await page.locator("select").selectOption(["number:2"]);
+	// if anoha, select child separately
+	if (museumsId === "57") {
+		await page
+			.locator("select")
+			.locator("nth=1")
+			.selectOption(["number:1"]);
+	}
 	await page.click('button[translate="common.actions.cart"]');
 };
 

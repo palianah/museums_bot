@@ -4,7 +4,7 @@ on:
     schedule:
         # TODO: every last Saturday of the month at 23:58 UTC
         - cron: "58 23 * * 6" # every Saturday at 23:58 UTC
-        - cron: "02 00 * * 0" # every Sunday at 00:02 UTC
+        #- cron: "02 00 * * 0" # every Sunday at 00:02 UTC
 
     # allow manual triggering
     workflow_dispatch:
