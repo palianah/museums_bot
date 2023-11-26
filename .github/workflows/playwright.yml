@@ -3,8 +3,8 @@ on:
     # run full scan daily on default branch (develop)
     schedule:
         # TODO: every last Saturday of the month at 23:58 UTC
-        - cron: "58 23 * * 6" # every Saturday at 23:58 UTC
-        #- cron: "02 00 * * 0" # every Sunday at 00:02 UTC
+        - cron: "45 23 * * 6" # every Saturday at 23:45 UTC
+        - cron: "58 00 * * 0" # every Saturday at 23:58 UTC - need two because github delays the workflow, don't know when it runs in real
 
     # allow manual triggering
     workflow_dispatch:
