@@ -64,7 +64,7 @@ test.describe("Museums", () => {
 
 			await expect(
 				page.getByRole("heading", {
-					name: "Willkommen! Bitte wählen Sie ein Museum aus.",
+					name: "Willkommen!",
 				})
 			).toBeVisible();
 
